@@ -19,59 +19,22 @@
 			// 	console.log(3);
       // }).then(() => {console.log(4)});
 
-			Promise.resolve().then(() => {
-				console.log(1);
-				return Promise.resolve(5);
-			}).then((res) => {
-				console.log(res);
-			});
-
-			Promise.resolve().then(() => {
-				console.log(2);
-			}).then(() => {
-				console.log(3);
-			}).then(() => {
-				console.log(4);
-			}).then(() => {
-				console.log(6);
-			});
-
-			const p1 = Promise.resolve();
-			const p2 = p1.then(() => {
-				console.log(1);
-				return Promise.resolve(5);
-			});
-			const p3 = p2.then((res) => {
-				console.log(res);
-			});
-		/*
-		 	微队列
-		 	[
-		 	() => {
-				console.log(1);
-				return Promise.resolve(5);
-			},
-			() => {
-				console.log(2);
-			},
-			() => {
-				console.log(3);
-			},
-			() => {
-				console.log(4);
-			},
-			() => {
-				console.log(6);
-			},
-			(res) => {
-					console.log(res);
-				},
-		 	],
-		 */
-
-      /*
-      输出1、2、3、4、6、5
-       */
+			// Promise.resolve().then(() => {
+			// 	console.log(1);
+			// 	return Promise.resolve(5);
+			// }).then((res) => {
+			// 	console.log(res);
+			// });
+      //
+			// Promise.resolve().then(() => {
+			// 	console.log(2);
+			// }).then(() => {
+			// 	console.log(3);
+			// }).then(() => {
+			// 	console.log(4);
+			// }).then(() => {
+			// 	console.log(6);
+			// });
     </script>
   </body>
 </html>

@@ -12,7 +12,19 @@ export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
+  beforeCreate() {
+    console.log('App beforeCreate');
+  },
+  created() {
+    console.log('App created');
+  },
+  mounted() {
+    console.log('App mounted');
+  },
+  activated() {
+    console.log('App activated');
+  },
 }
 </script>
 

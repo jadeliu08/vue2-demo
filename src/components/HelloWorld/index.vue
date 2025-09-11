@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" @click="handleClick">
     <h1>{{ msg }}</h1>
     <h2>you are so stupid</h2>
   </div>
@@ -15,41 +15,59 @@ export default {
       default: '123',
     }
   },
+  data() {
+    return {
+      name: 'jade',
+      foot: {
+        touched: ''
+      }
+    };
+  },
   computed: {
     msgDesc() {
       console.log('HelloWorld computed');
-      return this.msg + 'ssssss';
+      return this.msg;
     },
   },
   beforeCreate() {
-    this.msgDesc = 'msg beforeCreate';
+    // this.msgDesc = 'msg beforeCreate';
     console.log('HelloWorld beforeCreate');
   },
   created() {
     console.log('HelloWorld created');
   },
   mounted() {
-    console.log('HelloWorld mounted');
+    // console.log('HelloWorld mounted', this.$options.render.toString());
+    console.log('HelloWorld mounted', this);
+    // this.touch();
   },
   activated() {
     console.log('HelloWorld activated');
   },
-  // watch: {
-  //   a: {
-  //     handler() {},
-  //     deep: true,
-  //     immediate: true,
-  //   },
-  // },
+  watch: {
+    name() {
+
+    },
+    foot: {
+      handler(newVal, oldVal) {
+        console.log('watch foot handler', newVal, oldVal);
+      },
+      lazy: false,
+      deep: true,
+    }
+  },
   methods: {
-    add() {
-      console.log('method add');
+    touch() {
+      this.foot.touched = '疼'
+    },
+    handleClick() {
+      console.log('HelloWorld handleClick');
     },
   },
-  render(h) {
-    console.log('render', h);
-    return h('div', {}, '11111');
-  }
+  // render(h) {
+  //   console.log('render', h);
+  //   return h('div', {}, '11111');
+  // }
 }
 </script>
 

@@ -7,10 +7,10 @@ import Detail from "./components/Detail/index.vue";
 
 Vue.use(VueRouter);
 const routes = [
-	{path: '/', component: Home},
-	{path: '/detail', component: Detail},
-	{path: '/about', component: About},
+	{ path: '/', component: Home },
+	{ path: '/detail', component: Detail },
+	{ path: '/about', component: About },
 ];
-const router = new VueRouter({mode: 'hash', routes});
+const router = new VueRouter({ mode: 'hash', routes });
 
 export default router;

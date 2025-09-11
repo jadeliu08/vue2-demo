@@ -6,8 +6,8 @@
   </div>
 </template>
 <script>
-import HelloWorld from "../HelloWorld/index.vue";
-import {RouterLink} from "vue-router";
+import HelloWorld from '../HelloWorld/index.vue';
+import { RouterLink } from 'vue-router';
 
 export default {
   name: 'HomeComponent',

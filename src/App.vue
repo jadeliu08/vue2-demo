@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="11111"/>
+    <RouterView></RouterView>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld/index.vue'
+import { RouterView } from "vue-router";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    RouterView,
   },
   beforeCreate() {
     console.log('App beforeCreate');

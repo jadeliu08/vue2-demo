@@ -1,11 +1,14 @@
 <template>
-  <div class="hello" @click="handleClick">
-    <h1>{{ msg }}</h1>
-    <h2>you are so stupid</h2>
+  <div>
+    <div class="hello" @click="handleClick">
+      <h1>{{ msg }}</h1>
+      <h2>you are so stupid</h2>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   props: {

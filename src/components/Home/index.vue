@@ -3,6 +3,7 @@
     <HelloWorld/>
     <RouterLink to="/detail">go Detail</RouterLink>
     <RouterLink to="/about">go About</RouterLink>
+    <RouterLink to="/user/post">go User</RouterLink>
   </div>
 </template>
 <script>

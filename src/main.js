@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import router from './router';
+// import router from './router';
 import App from './App.vue';
 
 Vue.config.productionTip = false;
@@ -9,6 +9,7 @@ Vue.config.productionTip = false;
 // });
 
 new Vue({
+	name: 'appRoot',
 	render: h => h(App),
-	router: router,
+	// router: router,
 }).$mount('#app')

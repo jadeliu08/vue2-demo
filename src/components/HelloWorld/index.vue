@@ -2,6 +2,7 @@
   <div class="hello" @click="handleClick">
     <h1>{{ msg }}</h1>
     <h2>you are so stupid</h2>
+    <h3>My name is {{ name }}</h3>
   </div>
 </template>
 
@@ -63,6 +64,7 @@ export default {
     },
     handleClick() {
       console.log('HelloWorld handleClick');
+      this.name = Math.random().toString(36).slice(2, 9);
     },
   },
   // render(h) {

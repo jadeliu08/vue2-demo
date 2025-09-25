@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>you are so stupid</h2>
     <h3>My name is {{ name }}</h3>
+    <h3>{{count}}</h3>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ export default {
   },
   data() {
     return {
+      count: 1,
       name: 'jade',
       foot: {
         touched: ''
@@ -65,6 +67,9 @@ export default {
     handleClick() {
       console.log('HelloWorld handleClick');
       this.name = Math.random().toString(36).slice(2, 9);
+      this.count += 1;
+      this.count += 1;
+      this.count += 1;
     },
   },
   // render(h) {

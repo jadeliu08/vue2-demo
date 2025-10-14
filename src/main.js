@@ -12,4 +12,4 @@ new Vue({
 	name: 'appRoot',
 	render: h => h(App),
 	router: router,
-}).$mount('#app')
+}).$mount('#app');

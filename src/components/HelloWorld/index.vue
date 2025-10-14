@@ -4,12 +4,18 @@
     <h2>you are so stupid</h2>
     <h3>My name is {{ name }}</h3>
     <h3>{{count}}</h3>
+    <input type="text" v-model="name">
+    <Header v-model="headers"/>
+    <h4>{{headers}}</h4>
   </div>
 </template>
 
 <script>
-
+import Header from './components/Header.vue';
 export default {
+  components: {
+    Header,
+  },
   name: 'HelloWorld',
   props: {
     msg: {
@@ -24,7 +30,8 @@ export default {
       name: 'jade',
       foot: {
         touched: ''
-      }
+      },
+      headers: 'headers',
     };
   },
   computed: {
@@ -58,7 +65,7 @@ export default {
       },
       lazy: false,
       deep: true,
-    }
+    },
   },
   methods: {
     touch() {
@@ -66,16 +73,12 @@ export default {
     },
     handleClick() {
       console.log('HelloWorld handleClick');
-      this.name = Math.random().toString(36).slice(2, 9);
+      // this.name = Math.random().toString(36).slice(2, 9);
       this.count += 1;
       this.count += 1;
       this.count += 1;
     },
   },
-  // render(h) {
-  //   console.log('render', h);
-  //   return h('div', {}, '11111');
-  // }
 }
 </script>
 

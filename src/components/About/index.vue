@@ -1,5 +1,9 @@
 <template>
-  <div>About</div>
+  <div>
+    <span>About</span>
+    <slot></slot>
+    <slot name="child" />
+  </div>
 </template>
 <script>
 

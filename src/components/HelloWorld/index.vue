@@ -7,13 +7,19 @@
     <input type="text" v-model="name">
     <Header v-model="headers"/>
     <h4>{{headers}}</h4>
+    <CollapsePanel v-model="isCollapsed">
+      <p>这是折叠内容</p>
+    </CollapsePanel>
+    <h4>{{isCollapsed}}</h4>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
+import CollapsePanel from './components/CollapsePanel.vue';
 export default {
   components: {
+    CollapsePanel,
     Header,
   },
   name: 'HelloWorld',
@@ -32,6 +38,7 @@ export default {
         touched: ''
       },
       headers: 'headers',
+      isCollapsed: false,
     };
   },
   computed: {

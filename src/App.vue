@@ -1,20 +1,21 @@
 <template>
   <div id="app">
     <h2>This is h2 content</h2>
+    <component :is="`HelloWorld`"></component>
 <!--    <HelloWorld></HelloWorld>-->
-    <RouterView></RouterView>
+<!--    <RouterView></RouterView>-->
   </div>
 </template>
 
 <script>
-import { RouterView } from 'vue-router';
-// import HelloWorld from './components/HelloWorld/index.vue';
+// import { RouterView } from 'vue-router';
+import HelloWorld from './components/HelloWorld/index.vue';
 
 export default {
   name: 'App',
   components: {
-    RouterView,
-    // HelloWorld,
+    // RouterView,
+    HelloWorld,
   },
   beforeCreate() {
     console.log('App beforeCreate', this.$options);
